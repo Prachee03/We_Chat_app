@@ -105,7 +105,8 @@ class _CompleteProfileState extends State<CompleteProfile> {
     await FirebaseFirestore.instance.collection("users").doc(widget.userModel!.uid).set(widget.userModel!.toMap()).
     then((value){
       print("data uploaded");
-      Navigator.push(
+      Navigator.popUntil(context, (route) => route.isFirst);
+      Navigator.pushReplacement(
           context,
            MaterialPageRoute(builder: (context){
              return HomePage(userModel: widget.userModel!, firebaseuser: widget.firebaseUser!);

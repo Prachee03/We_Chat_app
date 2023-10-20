@@ -7,6 +7,10 @@ import 'package:my_chat_app/pages/CompleteProfile.dart';
 import 'package:my_chat_app/pages/HomePage.dart';
 import 'package:my_chat_app/pages/LoginPage.dart';
 import 'package:my_chat_app/pages/SignupPage.dart';
+import 'package:uuid/uuid.dart';
+
+
+var uuid=Uuid();
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +35,7 @@ void main() async{
     {
       runApp(MyApp());
     }
+
 }
 
 //not logged in
